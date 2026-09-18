@@ -7,7 +7,7 @@ category: "Patient Guide"
 icon: "📋"
 ---
 
-Booking your first physiotherapy appointment is a great step toward recovery, but it’s completely normal to feel a bit unsure about what to expect. Whether you are visiting our clinic in Faridabad or we are coming to you for a **home visit**, the process is designed to be thorough, comfortable, and highly informative.
+Booking your first physiotherapy appointment is a great step toward recovery, but it’s completely normal to feel a bit unsure about what to expect. When you visit our clinic in Faridabad, the process is designed to be thorough, comfortable, and highly informative.
 
 Here is a breakdown of what happens during your initial assessment at Nerivahealth.
 

@@ -24,4 +24,4 @@ Numbness or a "pins and needles" sensation in your legs or feet is another stron
 If you cannot bend over to tie your shoes, struggle to stand up straight, or find it impossible to sit at your desk for more than 10 minutes, you need professional intervention. Physiotherapy focuses on restoring your function so you can get back to your daily activities.
 
 ## How Nerivahealth Can Help
-At Nerivahealth Physiotherapy & Rehabilitation Centre, we don't just treat the symptom; we look for the root cause of your back pain. Whether you visit our clinic in Sector 45 or opt for a convenient **Home Visit**, Dr. Abhishek Kumar will assess your posture, mobility, and strength to create a tailored recovery plan.
+At Nerivahealth Physiotherapy & Rehabilitation Centre, we don't just treat the symptom; we look for the root cause of your back pain. When you visit our clinic in Sector 45, Dr. Abhishek Kumar will assess your posture, mobility, and strength to create a tailored recovery plan.
