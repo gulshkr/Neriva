@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const posts = await Astro.glob('./*.md');
+---
+
+<Layout 
+    title="Blog & Patient Stories | Nerivahealth Physiotherapy" 
+    description="Read educational articles, physiotherapy tips, and inspiring patient recovery stories from Nerivahealth Physiotherapy Clinic."
+>
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            background-color: #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #94A3B8;
+        }
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-category {
+            color: var(--secondary-teal);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .blog-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        .blog-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .blog-link {
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-top: auto;
+        }
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Blog & Patient Stories</h1>
+            <p>Helpful advice, physiotherapy insights, and inspiring recovery journeys.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-light); min-height: 50vh;">
+        <div class="container">
+            <div class="blog-grid">
+                
+                {posts.map((post) => (
+                    <div class="blog-card">
+                        <div class="blog-img">{post.frontmatter.icon || '📝'}</div>
+                        <div class="blog-content">
+                            <span class="blog-category">{post.frontmatter.category || 'Education'}</span>
+                            <h2 class="blog-title">{post.frontmatter.title}</h2>
+                            <p class="blog-excerpt">{post.frontmatter.description}</p>
+                            <a href={post.url} class="blog-link">Read More →</a>
+                        </div>
+                    </div>
+                ))}
+
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -1,0 +1,80 @@
+---
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title || "Nerivahealth Physiotherapy Clinic"}</title>
+    <meta name="description" content={description || "Professional physiotherapy & rehabilitation in Faridabad."}>
+    
+    <meta property="og:title" content={title || "Nerivahealth Physiotherapy Clinic"}>
+    <meta property="og:description" content={description || "Professional physiotherapy & rehabilitation in Faridabad."}>
+    <meta property="og:image" content="/images/logo.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.jpg" alt="Nerivahealth Physiotherapy Logo">
+            </a>
+            
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#approach">Our Approach</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:9650940281" class="btn btn-primary">Call: 9650940281</a>
+                <div class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    ☰
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <slot />
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="/images/logo.jpg" alt="Nerivahealth" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                <p style="color: #CBD5E1; max-width: 300px;">Evidence-based, personalized physiotherapy including convenient home visits across Faridabad.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="/#home">Home</a>
+                <a href="/#services">Services</a>
+                <a href="/blog">Blog & Stories</a>
+                <a href="/#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <p style="color: #CBD5E1; font-size: 0.9rem;">The information on this website is for educational purposes and does not replace professional medical advice.</p>
+                <br>
+                <p style="color: #CBD5E1; font-size: 0.9rem;">&copy; 2026 Nerivahealth Physiotherapy & Rehabilitation Centre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-sticky-footer">
+        <a href="tel:9650940281" class="btn btn-primary">📞 Call Now</a>
+        <a href="https://wa.me/919650940281?text=Hello,%20I%20would%20like%20to%20book%20a%20consultation%20at%20Nerivahealth%20Physiotherapy." target="_blank" class="btn btn-accent">💬 WhatsApp</a>
+    </div>
+
+    <script src="/script.js" is:inline></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+    title="Nerivahealth Physiotherapy Clinic in Sector 45, Faridabad" 
+    description="Professional physiotherapy & rehabilitation in Sector 45, Faridabad. Dr. Abhishek Kumar (PT) treats back pain, neuro conditions, and sports injuries. Book now."
+>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Expert Physiotherapy & Home Visit Rehabilitation in Faridabad</h1>
+            <p class="subtext">Overcome pain, restore your mobility, and get back to the activities you love. Evidence-based physiotherapy tailored to your specific condition, available at our Sector-45 location or in the comfort of your home.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                <a href="https://wa.me/919650940281?text=Hello,%20I%20would%20like%20to%20book%20a%20consultation%20at%20Nerivahealth%20Physiotherapy." target="_blank" class="btn btn-accent">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            Led by Dr. Abhishek Kumar (PT) | BPT, MPT (Orthopedics) | HSCP Reg. No. - HSCP/PT/2022/1583
+        </div>
+    </div>
+
+    <!-- Services / Conditions Grid -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Specialized Care for Your Recovery</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">🦴</div>
+                    <h3>Orthopedic Conditions</h3>
+                    <p>Relief for back pain, neck pain, frozen shoulder, and arthritis with targeted manual therapy and exercises.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Neurological Rehab</h3>
+                    <p>Dedicated support for stroke recovery, paralysis, and nerve-related conditions like sciatica.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🦿</div>
+                    <h3>Post-Operative Care</h3>
+                    <p>Safe, guided rehabilitation following joint replacements and orthopedic surgeries to restore full function.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏃</div>
+                    <h3>Sports Rehabilitation</h3>
+                    <p>Advanced manual therapy, cupping, and taping for sports injury recovery and joint pain.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Home Visits</h3>
+                    <p>Professional physiotherapy sessions delivered in the privacy and comfort of your home across Faridabad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Approach -->
+    <section id="approach" class="section-padding" style="background: var(--bg-light)">
+        <div class="container">
+            <h2 class="section-title">Your Journey to Recovery</h2>
+            <div class="approach-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Detailed Assessment</h3>
+                        <p>We treat the root cause, not just symptoms. Every patient receives a thorough evaluation to understand their unique condition.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Personalized Treatment Plan</h3>
+                        <p>Dr. Abhishek designs an individualized rehabilitation plan tailored to your lifestyle, pain levels, and recovery goals.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Active Rehabilitation</h3>
+                        <p>Hands-on therapy, guided exercises, and advanced techniques (cupping/taping) are used to restore mobility and reduce pain.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Progress & Prevention</h3>
+                        <p>We monitor your progress and provide education to prevent future injuries, ensuring long-term health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Doctor -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Meet Dr. Abhishek Kumar (PT)</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 2rem;">
+                    Dr. Abhishek Kumar is a highly qualified physiotherapist with a Master’s degree in Orthopedics. Dedicated to evidence-based practice, he specializes in treating complex musculoskeletal and neurological conditions. His patient-first approach ensures that you receive the time, attention, and specialized care necessary for a complete recovery.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div><strong>Qualifications:</strong> BPT, MPT (Orthopedics)</div>
+                    <div><strong>Registration:</strong> HSCP/PT/2022/1583</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section-padding" style="background: var(--bg-light)">
+        <div class="container">
+            <h2 class="section-title">Contact & Location</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+                
+                <!-- Web3Forms Integration -->
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Book a Consultation</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">Fill out the form below to request an appointment or home visit.</p>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <div>
+                            <label for="name" style="display:block; margin-bottom: 0.5rem; font-weight: 500;">Your Name</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 0.375rem;">
+                        </div>
+                        <div>
+                            <label for="phone" style="display:block; margin-bottom: 0.5rem; font-weight: 500;">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 0.375rem;">
+                        </div>
+                        <div>
+                            <label for="message" style="display:block; margin-bottom: 0.5rem; font-weight: 500;">Brief description of issue (Optional)</label>
+                            <textarea id="message" name="message" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 0.375rem;"></textarea>
+                        </div>
+                        
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Request Appointment</button>
+                    </form>
+                </div>
+
+                <!-- Location Details -->
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Clinic Details</h3>
+                    <div style="margin-bottom: 2rem; line-height: 1.8;">
+                        <strong>Address:</strong><br>
+                        House No. 114, 1st Floor, Sector-45,<br>
+                        Faridabad, Haryana - 121010<br><br>
+                        
+                        <strong>Phone:</strong> <a href="tel:9650940281" style="color: var(--primary-blue); font-weight: 600;">9650940281</a><br>
+                        <strong>Hours:</strong> 10:00 AM - 8:00 PM
+                    </div>
+
+                    <!-- Embedded Map -->
+                    <div style="width: 100%; height: 250px; background: #E2E8F0; border-radius: 0.5rem; overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14032.554378950587!2d77.30944!3d28.441467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cddec2451bd83%3A0x7d6c4a161f3eb1a9!2sSector%2045%2C%20Faridabad%2C%20Haryana%20121003!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</Layout>
