@@ -8,10 +8,10 @@ const { title, description } = Astro.props;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title || "Nerivahealth Physiotherapy Clinic"}</title>
+    <title>{title || "Physiotherapy Clinic in Faridabad | Neriva Health"}</title>
     <meta name="description" content={description || "Professional physiotherapy & rehabilitation in Faridabad."}>
     
-    <meta property="og:title" content={title || "Nerivahealth Physiotherapy Clinic"}>
+    <meta property="og:title" content={title || "Physiotherapy Clinic in Faridabad | Neriva Health"}>
     <meta property="og:description" content={description || "Professional physiotherapy & rehabilitation in Faridabad."}>
     <meta property="og:image" content="/images/logo.jpg">
     <meta property="og:type" content="website">
@@ -20,6 +20,26 @@ const { title, description } = Astro.props;
     <link rel="stylesheet" href="/style.css">
     
     <Analytics />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Nerivahealth Physiotherapy & Rehabilitation Centre",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "House No. 114, 1st Floor, Sector-45",
+        "addressLocality": "Faridabad",
+        "addressRegion": "Haryana",
+        "postalCode": "121010",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9650940281",
+      "url": "https://nerivahealth.com",
+      "openingHours": "Mo-Su 10:00-20:00",
+      "image": "https://nerivahealth.com/images/logo.jpg"
+    }
+    </script>
 </head>
 <body>
 
@@ -31,9 +51,10 @@ const { title, description } = Astro.props;
             
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#conditions">Conditions</a></li>
                     <li><a href="/#services">Services</a></li>
-                    <li><a href="/#approach">Our Approach</a></li>
+                    <li><a href="/dr-abhishek-kumar">About Dr. Abhishek</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/#contact">Contact</a></li>
                 </ul>
@@ -57,7 +78,7 @@ const { title, description } = Astro.props;
             <div class="footer-col">
                 <img src="/images/logo.jpg" alt="Nerivahealth" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
                 <p style="color: #CBD5E1; max-width: 300px;">Evidence-based, personalized physiotherapy and comprehensive rehabilitation across Faridabad.</p>
-                <p style="color: #CBD5E1; margin-top: 1rem;"><a href="mailto:nerivahealth@nerivahealth.com">nerivahealth@nerivahealth.com</a></p>
+                <p style="color: #CBD5E1; margin-top: 1rem;"><a href="mailto:appointments@nerivahealth.com">appointments@nerivahealth.com</a></p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>

@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+    title="Dr. Abhishek Kumar | Physiotherapist in Faridabad" 
+    description="Dr. Abhishek Kumar is a highly qualified physiotherapist with a BPT and MPT in Orthopedics, providing evidence-based care in Sector 45, Faridabad."
+>
+    <section class="section-padding" style="margin-top: 4rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start; max-width: 1000px; margin: 0 auto;">
+                
+                <div>
+                    <h1 style="margin-bottom: 1rem; color: var(--primary-blue);">Dr. Abhishek Kumar (PT)</h1>
+                    <p style="font-size: 1.25rem; color: var(--text-light); margin-bottom: 2rem;">BPT, MPT (Orthopedics) | HSCP Reg. No. HSCP/PT/2022/1583</p>
+                    
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">About Dr. Abhishek</h2>
+                        <p style="line-height: 1.8; color: var(--text-light); margin-bottom: 1rem;">
+                            Dr. Abhishek Kumar is a physiotherapist with a Bachelor of Physiotherapy (BPT) and Master of Physiotherapy (MPT) specializing in Orthopedics. He provides comprehensive physiotherapy and rehabilitation services at Nerivahealth in Sector 45, Faridabad.
+                        </p>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            With a strong commitment to evidence-based practice, Dr. Abhishek focuses on understanding the underlying factors contributing to musculoskeletal and neurological symptoms, rather than just treating the pain. 
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 0.5rem;">
+                            <h3 style="margin-bottom: 1rem;">Clinical Focus Areas</h3>
+                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-light); line-height: 1.8;">
+                                <li>Orthopedic Rehabilitation</li>
+                                <li>Post-Surgical Recovery</li>
+                                <li>Sports Injuries</li>
+                                <li>Neurological Rehabilitation</li>
+                                <li>Spine & Postural Correction</li>
+                            </ul>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 0.5rem;">
+                            <h3 style="margin-bottom: 1rem;">Treatment Philosophy</h3>
+                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-light); line-height: 1.8;">
+                                <li>Evidence-based interventions</li>
+                                <li>Comprehensive biomechanical assessments</li>
+                                <li>One-on-one patient care</li>
+                                <li>Active rehabilitation and exercise</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Book a Consultation</h2>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-light);">To schedule an assessment with Dr. Abhishek Kumar, please contact the clinic.</p>
+                        <a href="https://wa.me/919650940281?text=Hello,%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Abhishek." target="_blank" class="btn btn-accent" style="margin-right: 1rem;">Chat on WhatsApp</a>
+                        <a href="tel:9650940281" class="btn btn-primary">Call Clinic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema Markup for Doctor -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Abhishek Kumar",
+      "jobTitle": "Physiotherapist",
+      "medicalSpecialty": "Orthopedics",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "Nerivahealth Physiotherapy & Rehabilitation Centre"
+      },
+      "url": "https://nerivahealth.com/dr-abhishek-kumar"
+    }
+    </script>
+</Layout>
