@@ -99,8 +99,9 @@ const { frontmatter } = Astro.props;
                 <div class="author-box">
                     <div class="author-img">AK</div>
                     <div>
-                        <h4 style="margin-bottom: 0.25rem;">Written by Dr. Abhishek Kumar (PT)</h4>
-                        <p style="margin: 0; font-size: 0.9rem;">BPT, MPT (Orthopedics)</p>
+                        <h4 style="margin-bottom: 0.25rem;">Written/reviewed by: Dr. Abhishek Kumar (PT)</h4>
+                        <p style="margin: 0; font-size: 0.9rem; margin-bottom: 0.25rem;">BPT, MPT (Orthopedics)</p>
+                        <p style="margin: 0; font-size: 0.8rem; color: var(--text-light);">Last reviewed: {frontmatter.date}</p>
                     </div>
                 </div>
             </div>
