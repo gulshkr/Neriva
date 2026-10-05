@@ -30,9 +30,13 @@ Inside this project, you'll see the following key directories and files:
 │   └── style.css     # Global CSS and Design System
 ├── src/
 │   ├── layouts/
-│   │   └── Layout.astro     # The main wrapper containing the Header & Footer
+│   │   ├── Layout.astro     # The main wrapper containing the Header & Footer
+│   │   └── BlogPost.astro   # Wrapper specifically for blog posts
 │   ├── pages/
 │   │   ├── index.astro      # The Homepage
+│   │   ├── about/           # About Us page
+│   │   ├── conditions/      # Pages for different conditions treated
+│   │   ├── rehabilitation/  # Pages for rehabilitation services
 │   │   ├── blog/            
 │   │   │   ├── index.astro  # The Blog listing page (Auto-generates from Markdown)
 │   │   │   └── *.md         # Your actual blog posts!
