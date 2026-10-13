@@ -45,33 +45,49 @@ Inside this project, you'll see the following key directories and files:
 
 ## ✍️ How to Publish a New Blog Post
 
-Publishing new educational articles or patient stories is incredibly easy. You do not need to write any HTML.
+### Recommended: Use the AI Skill (`neriva-blog`)
+This workspace includes a specialized Antigravity skill located at [`.agents/skills/neriva-blog/SKILL.md`](./.agents/skills/neriva-blog/SKILL.md).
+Whenever you ask Antigravity or any AI coding model in this repo:
+> *"Write a new blog post about [condition or treatment]"*
 
-1. Navigate to the `src/pages/blog/` folder.
-2. Create a new file with a `.md` extension (e.g., `shoulder-pain-tips.md`).
-3. At the very top of your new file, add the following "frontmatter" to define the post details:
+The model will automatically:
+1. Generate a custom 16:9 medical illustration via AI and save it to `public/images/blog/`.
+2. Format the post with rich visual callouts (`.key-takeaways-box`, `.doctor-tip-box`, and `.exercise-card`).
+3. Attribute clinical authority to **Dr. Abhishek Kumar (PT)** and include local SEO for Sector 45, Faridabad.
+4. Verify the build with `npm run build`.
+
+### Manual Blog Creation
+1. Navigate to `src/pages/blog/`.
+2. Create `<slug>.md` (e.g. `sciatica-relief-tips.md`).
+3. Add the complete frontmatter schema:
 
 ```markdown
 ---
 layout: ../../layouts/BlogPost.astro
 title: "Your Blog Title Here"
 description: "A short 1-2 sentence description for SEO and the blog card."
-date: "Oct 12, 2026"
-category: "Education"
+date: "Oct 13, 2026"
+category: "Orthopedics & Spine"
+readTime: "5 min read"
+image: "/images/blog/your-slug.jpg"
 icon: "💡"
 ---
 
-Start writing your blog content here in plain text.
+<div class="key-takeaways-box">
+    <h4>📌 Key Takeaways</h4>
+    <ul>
+        <li>Takeaway point 1</li>
+        <li>Takeaway point 2</li>
+    </ul>
+</div>
 
-You can use **bold text** or create lists:
-- Item 1
-- Item 2
+Your content here...
 
-## Use Hash Symbols for Headings
-Just like this!
+<div class="doctor-tip-box">
+    <div class="doctor-tip-badge">👨‍⚕️ Clinical Tip from Dr. Abhishek Kumar (PT)</div>
+    <p>"Your clinical advice quote here..."</p>
+</div>
 ```
-
-Once you save the file, Astro will automatically build the webpage and add a new card to the `blog.html` page!
 
 ## ✉️ Contact Form Setup (Important)
 
