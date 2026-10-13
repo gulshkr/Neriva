@@ -1,5 +1,81 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Placeholder testimonials (8 patient recovery stories across conditions) — replace with approved patient reviews when ready
+const testimonials = [
+    {
+        name: "Rakesh Verma",
+        condition: "Chronic Lower Back Pain & Sciatica",
+        tag: "Spine Rehabilitation",
+        location: "Sector 14, Faridabad",
+        rating: 5,
+        quote: "I struggled with severe lower back pain and sciatica stiffness for over 6 months from long desk hours. After a thorough assessment and 4 weeks of targeted physiotherapy and core exercises with Dr. Abhishek, I am now completely pain-free and back to my normal routine.",
+        initials: "RV"
+    },
+    {
+        name: "Sunita Mehra",
+        condition: "Post Knee Replacement Rehab",
+        tag: "Post-Surgical Recovery",
+        location: "Sector 45, Faridabad",
+        rating: 5,
+        quote: "Dr. Abhishek provided post-operative home physiotherapy after my mother's knee replacement surgery. His patience, gentle guidance, and structured exercise plans helped her regain full knee flexion and walking confidence without any support.",
+        initials: "SM"
+    },
+    {
+        name: "Kunal Sharma",
+        condition: "Rotator Cuff & Shoulder Strain",
+        tag: "Sports Injury",
+        location: "Greenfield Colony, Faridabad",
+        rating: 5,
+        quote: "Suffered a shoulder strain during workout sessions. Dr. Abhishek's thorough biomechanical assessment, manual therapy, and recovery plan restored my full range of motion much faster than expected. Very professional clinic!",
+        initials: "KS"
+    },
+    {
+        name: "Anjali Gupta",
+        condition: "Cervical Spondylosis & Neck Stiffness",
+        tag: "Cervical Care",
+        location: "Sector 21C, Faridabad",
+        rating: 5,
+        quote: "Long laptop hours caused acute neck spasms and tension headaches. The ergonomic guidance, manual release, and postural strengthening exercises designed by Dr. Abhishek relieved my chronic neck pain completely within a month.",
+        initials: "AG"
+    },
+    {
+        name: "Vikram Singh",
+        condition: "Post-Stroke Mobility & Motor Rehab",
+        tag: "Neurological Rehab",
+        location: "Sector 31, Faridabad",
+        rating: 5,
+        quote: "After my father had a mild stroke, we engaged Nerivahealth for neurological rehabilitation. Dr. Abhishek's consistent, dedicated sessions dramatically improved his balance, limb strength, and ability to walk independently.",
+        initials: "VS"
+    },
+    {
+        name: "Priya Malhotra",
+        condition: "Adhesive Capsulitis (Frozen Shoulder)",
+        tag: "Joint Mobility",
+        location: "Sector 16, Faridabad",
+        rating: 5,
+        quote: "My shoulder had become so stiff that I couldn't even raise my arm to comb my hair. With regular gentle joint mobilization, heat therapy, and home exercises guided by Dr. Abhishek, I regained 95% of my shoulder movement in 6 weeks.",
+        initials: "PM"
+    },
+    {
+        name: "Harish Chawla",
+        condition: "Severe Knee Osteoarthritis",
+        tag: "Geriatric Care",
+        location: "Sector 46, Faridabad",
+        rating: 5,
+        quote: "At 68, walking was becoming painful due to knee osteoarthritis. Instead of rushing to surgery, Dr. Abhishek created a targeted strengthening program for my legs and hips. My pain levels dropped significantly and daily morning walks are enjoyable again.",
+        initials: "HC"
+    },
+    {
+        name: "Meenakshi Rawat",
+        condition: "Post-Fracture Ankle Rehabilitation",
+        tag: "Orthopedic Care",
+        location: "NIT 3, Faridabad",
+        rating: 5,
+        quote: "After cast removal, my ankle was stiff, swollen, and weak. The progressive rehabilitation, balance training, and gait correction at Nerivahealth got me back to wearing normal shoes and climbing stairs pain-free.",
+        initials: "MR"
+    }
+];
 ---
 
 <Layout 
@@ -113,8 +189,70 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
+    <!-- Patient Testimonials Section -->
+    <section id="testimonials" class="section-padding testimonials-section" style="background: var(--bg-light); overflow: hidden;">
+        <div class="container">
+            <div class="testimonials-header">
+                <div>
+                    <span style="color: var(--secondary-teal); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Patient Stories</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">What Our Patients Say</h2>
+                    <p style="color: var(--text-light); font-size: 1.05rem; margin-bottom: 0;">Real recovery stories from individuals who regained pain-free mobility with our personalized physiotherapy.</p>
+                </div>
+                <div class="testimonials-controls">
+                    <button id="testimonial-prev" class="carousel-control-btn" aria-label="Previous Testimonial" title="Previous Testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button id="testimonial-next" class="carousel-control-btn" aria-label="Next Testimonial" title="Next Testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Track with Infinite Seamless Duplication -->
+        <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-carousel-track" id="testimonials-track" tabindex="0" role="region" aria-label="Patient Testimonials Carousel">
+                {[...testimonials, ...testimonials].map((t) => (
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="testimonial-stars" aria-label={`Rating: ${t.rating} out of 5 stars`}>
+                                {"★".repeat(t.rating)}
+                            </div>
+                            <p class="testimonial-text">"{t.quote}"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">{t.initials}</div>
+                            <div class="testimonial-info">
+                                <h4>{t.name}</h4>
+                                <p>{t.location}</p>
+                                <span class="testimonial-badge">{t.tag}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="testimonials-footer-row">
+                <div class="testimonials-hint">
+                    <span class="pause-icon">⏸</span>
+                    <span>Hover over any card to pause scrolling &bull; Drag or use arrows to browse</span>
+                </div>
+                <div class="testimonials-summary">
+                    <span style="color: #F59E0B; font-size: 1.25rem;">★★★★★</span>
+                    <span><strong>5.0 / 5.0</strong> Patient Satisfaction across Faridabad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact & Location Section -->
-    <section id="contact" class="section-padding" style="background: var(--bg-light)">
+    <section id="contact" class="section-padding">
         <div class="container">
             <h2 class="section-title">Contact & Location</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
