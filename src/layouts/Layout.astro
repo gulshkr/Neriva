@@ -36,6 +36,9 @@ const { title, description } = Astro.props;
       },
       "telephone": "+91-9650940281",
       "url": "https://nerivahealth.com",
+      "sameAs": [
+        "https://www.instagram.com/nerivahealth_physio_rehab/"
+      ],
       "openingHours": "Mo-Su 10:00-20:00",
       "image": "https://nerivahealth.com/images/logo.jpg"
     }
@@ -65,10 +68,29 @@ const { title, description } = Astro.props;
                     <li><a href="/about/dr-abhishek-kumar">About Dr. Abhishek</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/#contact">Contact</a></li>
+                    <li class="mobile-nav-social">
+                        <a href="https://www.instagram.com/nerivahealth_physio_rehab/" target="_blank" rel="noopener noreferrer">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg>
+                                Instagram: @nerivahealth_physio_rehab
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div class="header-cta">
+                <a href="https://www.instagram.com/nerivahealth_physio_rehab/" target="_blank" rel="noopener noreferrer" class="header-social-link" aria-label="Nerivahealth Instagram" title="Follow us on Instagram (@nerivahealth_physio_rehab)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
                 <a href="tel:9650940281" class="btn btn-primary">Call: 9650940281</a>
                 <div class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle menu">
                     ☰
@@ -86,7 +108,17 @@ const { title, description } = Astro.props;
             <div class="footer-col">
                 <img src="/images/logo.jpg" alt="Nerivahealth" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
                 <p style="color: #CBD5E1; max-width: 300px;">Evidence-based, personalized physiotherapy and comprehensive rehabilitation across Faridabad.</p>
-                <p style="color: #CBD5E1; margin-top: 1rem;"><a href="mailto:nerivahealth@nerivahealth.com">nerivahealth@nerivahealth.com</a></p>
+                <p style="color: #CBD5E1; margin-top: 0.75rem;"><a href="mailto:nerivahealth@nerivahealth.com">nerivahealth@nerivahealth.com</a></p>
+                <div style="margin-top: 1.25rem;">
+                    <a href="https://www.instagram.com/nerivahealth_physio_rehab/" target="_blank" rel="noopener noreferrer" class="footer-social-pill" aria-label="Nerivahealth on Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                        <span>@nerivahealth_physio_rehab</span>
+                    </a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -94,6 +126,23 @@ const { title, description } = Astro.props;
                 <a href="/#services">Services</a>
                 <a href="/blog">Blog & Stories</a>
                 <a href="/#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <a href="https://www.instagram.com/nerivahealth_physio_rehab/" target="_blank" rel="noopener noreferrer" class="footer-link-with-icon" aria-label="Follow us on Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                    <span>Instagram Profile</span>
+                </a>
+                <a href="https://wa.me/919650940281?text=Hello,%20I%20would%20like%20to%20book%20a%20consultation%20at%20Nerivahealth%20Physiotherapy." target="_blank" rel="noopener noreferrer" class="footer-link-with-icon">
+                    <span>💬 WhatsApp Support</span>
+                </a>
+                <a href="tel:9650940281" class="footer-link-with-icon">
+                    <span>📞 9650940281</span>
+                </a>
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>

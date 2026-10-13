@@ -83,6 +83,11 @@ Before going live:
 3. Locate the hidden input field: `<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">`.
 4. Replace `YOUR_ACCESS_KEY_HERE` with your actual key.
 
+## 📱 Social Media Channels
+
+- **Instagram:** [@nerivahealth_physio_rehab](https://www.instagram.com/nerivahealth_physio_rehab/)
+- **WhatsApp:** [+91 9650940281](https://wa.me/919650940281)
+
 ## 🏗️ Building for Production
 
 When you are ready to put the website on the live internet:
