@@ -4,8 +4,19 @@ title: "Frozen Shoulder: Why Complete Rest Won't Fix It (And What Does)"
 description: "Struggling to lift your arm? Learn why resting a frozen shoulder worsens stiffness, the 3 stages of adhesive capsulitis, and how gentle mobilization helps."
 date: "Sept 28, 2026"
 category: "Shoulder Rehabilitation"
+readTime: "6 min read"
+image: "/images/blog/frozen-shoulder-rehab.jpg"
 icon: "❄️"
 ---
+
+<div class="key-takeaways-box">
+    <h4>📌 Key Takeaways</h4>
+    <ul>
+        <li>Frozen shoulder involves contraction and thickening of the shoulder capsule, not just muscle fatigue.</li>
+        <li>Immobilizing the shoulder in a sling increases capsule adhesions and delays recovery by months.</li>
+        <li>Gentle low-load pendulum swings and passive range exercises signal the capsule to remodel safely.</li>
+    </ul>
+</div>
 
 Waking up with sharp shoulder pain when rolling over in bed, struggling to reach into a back pocket, or finding it impossible to fasten clothing—these are hallmark symptoms of **Adhesive Capsulitis**, widely known as **Frozen Shoulder**.
 
@@ -33,6 +44,11 @@ Because the capsule is actively contracting and forming adhesions, immobilizing 
 While forceful, aggressive stretching can aggravate the acute inflammatory state, **gentle, progressive, low-load mobility** is essential to signal the capsule to remodel and maintain joint space.
 
 ---
+
+<div class="doctor-tip-box">
+    <div class="doctor-tip-badge">👨‍⚕️ Clinical Tip from Dr. Abhishek Kumar (PT)</div>
+    <p>"With frozen shoulder, never push through sharp tearing pain. We operate in the 'comfortable stretch zone'. Aggressive stretching causes inflammatory rebound, whereas slow, daily, repetitive mobility gradually loosens the capsule."</p>
+</div>
 
 ## 3 Safe Exercises for Home Mobility
 

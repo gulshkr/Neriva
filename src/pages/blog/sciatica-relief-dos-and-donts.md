@@ -4,8 +4,19 @@ title: "Sciatica Pain Relief: 4 Crucial Do's and Don'ts You Need to Know"
 description: "Dealing with shooting nerve pain down your leg? Avoid common mistakes that aggravate sciatica and discover effective physiotherapy approaches."
 date: "Oct 02, 2026"
 category: "Spine Care"
+readTime: "5 min read"
+image: "/images/blog/sciatica-relief-spine.jpg"
 icon: "⚡"
 ---
+
+<div class="key-takeaways-box">
+    <h4>📌 Key Takeaways</h4>
+    <ul>
+        <li>Sciatica is nerve irritation; aggressive hamstring stretching often worsens the compression.</li>
+        <li>Avoid soft sinking sofas that flex the lumbar spine backward into nerve roots.</li>
+        <li>Frequent short 10-minute walks are far superior to prolonged bed rest for disc healing.</li>
+    </ul>
+</div>
 
 Sciatica is not a disease in itself; it is a symptom of irritation or compression of the sciatic nerve—the longest and thickest nerve in the human body. 
 
@@ -32,6 +43,11 @@ If your sciatica is accompanied by sudden numbness in the groin area (saddle ane
 ---
 
 ## The DO'S (What Actually Helps)
+
+<div class="doctor-tip-box">
+    <div class="doctor-tip-badge">👨‍⚕️ Clinical Tip from Dr. Abhishek Kumar (PT)</div>
+    <p>"If forward bending makes your leg pain shoot further down toward your foot, STOP immediately. This is called 'peripheralization'. We look for movements that bring pain closer back to the center of your spine ('centralization'), which is the hallmark of nerve recovery."</p>
+</div>
 
 ### 1. DO Use Short, Frequent Walking Breaks
 Gentle walking on flat surfaces promotes blood flow, releases natural endorphins, and encourages gentle spinal disc decompression. Aim for 10 to 15-minute walks multiple times a day rather than one long, exhausting walk.

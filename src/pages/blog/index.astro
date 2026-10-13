@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const posts = await Astro.glob('./*.md');
+const rawPosts = await Astro.glob('./*.md');
+// Sort posts newest first
+const posts = rawPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
 <Layout 
@@ -11,95 +13,167 @@ const posts = await Astro.glob('./*.md');
         .page-header {
             background-color: var(--primary-blue);
             color: var(--white);
-            padding: 4rem 0;
+            padding: 4.5rem 0;
             text-align: center;
         }
         .page-header h1 {
             color: var(--white);
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .page-header p {
+            color: #CBD5E1;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto;
         }
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.25rem;
         }
         .blog-card {
             background: var(--white);
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
+            border: 1px solid #E2E8F0;
         }
         .blog-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 28px -4px rgba(0,0,0,0.1);
+            border-color: #CBD5E1;
         }
-        .blog-img {
+        .blog-img-wrapper {
+            position: relative;
             width: 100%;
-            height: 200px;
-            background-color: #E2E8F0;
+            height: 210px;
+            overflow: hidden;
+            background: #E2E8F0;
+        }
+        .blog-cover-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .blog-card:hover .blog-cover-img {
+            transform: scale(1.06);
+        }
+        .blog-fallback-img {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: #94A3B8;
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+        }
+        .blog-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(30, 58, 138, 0.92);
+            backdrop-filter: blur(4px);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
         .blog-content {
-            padding: 1.5rem;
+            padding: 1.75rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
-        .blog-category {
-            color: var(--secondary-teal);
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
+        .blog-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.65rem;
         }
         .blog-title {
             font-size: 1.25rem;
-            margin-bottom: 1rem;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
             color: var(--primary-blue);
+            transition: color 0.2s ease;
+        }
+        .blog-card:hover .blog-title {
+            color: var(--secondary-teal);
         }
         .blog-excerpt {
             color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
             margin-bottom: 1.5rem;
             flex-grow: 1;
         }
         .blog-link {
             color: var(--accent-orange);
             font-weight: 600;
+            font-size: 0.95rem;
             margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: gap 0.2s ease;
         }
-        .blog-link:hover {
-            text-decoration: underline;
+        .blog-card:hover .blog-link {
+            gap: 0.6rem;
         }
     </style>
 
     <section class="page-header">
         <div class="container">
-            <h1>Blog & Patient Stories</h1>
-            <p>Helpful advice, physiotherapy insights, and inspiring recovery journeys.</p>
+            <h1>Blog & Patient Guides</h1>
+            <p>Evidence-based physiotherapy advice, practical recovery exercises, and wellness insights from Dr. Abhishek Kumar.</p>
         </div>
     </section>
 
-    <section class="section-padding" style="background: var(--bg-light); min-height: 50vh;">
+    <section class="section-padding" style="background: var(--bg-light); min-height: 60vh;">
         <div class="container">
             <div class="blog-grid">
                 
                 {posts.map((post) => (
-                    <div class="blog-card">
-                        <div class="blog-img">{post.frontmatter.icon || '📝'}</div>
-                        <div class="blog-content">
-                            <span class="blog-category">{post.frontmatter.category || 'Education'}</span>
-                            <h2 class="blog-title">{post.frontmatter.title}</h2>
-                            <p class="blog-excerpt">{post.frontmatter.description}</p>
-                            <a href={post.url} class="blog-link">Read More →</a>
-                        </div>
-                    </div>
+                    <article class="blog-card">
+                        <a href={post.url} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                            <div class="blog-img-wrapper">
+                                {post.frontmatter.image ? (
+                                    <img 
+                                        src={post.frontmatter.image} 
+                                        alt={post.frontmatter.title} 
+                                        class="blog-cover-img" 
+                                        loading="lazy" 
+                                    />
+                                ) : (
+                                    <div class="blog-fallback-img">
+                                        <span>{post.frontmatter.icon || '📋'}</span>
+                                    </div>
+                                )}
+                                <span class="blog-badge">{post.frontmatter.category || 'Education'}</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta-row">
+                                    <span>📅 {post.frontmatter.date}</span>
+                                    {post.frontmatter.readTime && <span>&bull;</span>}
+                                    {post.frontmatter.readTime && <span>⏱️ {post.frontmatter.readTime}</span>}
+                                </div>
+                                <h2 class="blog-title">{post.frontmatter.title}</h2>
+                                <p class="blog-excerpt">{post.frontmatter.description}</p>
+                                <span class="blog-link">Read Full Guide &rarr;</span>
+                            </div>
+                        </a>
+                    </article>
                 ))}
 
             </div>

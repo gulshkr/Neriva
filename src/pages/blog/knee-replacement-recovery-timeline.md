@@ -4,8 +4,19 @@ title: "Recovering from Knee Replacement: The First 6 Weeks Roadmap"
 description: "Planning or recovering from total knee replacement? Here is an expert week-by-week guide to milestones, swelling control, and home physiotherapy."
 date: "Sept 22, 2026"
 category: "Post-Surgical Care"
+readTime: "6 min read"
+image: "/images/blog/knee-replacement-recovery.jpg"
 icon: "🏥"
 ---
+
+<div class="key-takeaways-box">
+    <h4>📌 Key Takeaways</h4>
+    <ul>
+        <li>Full knee straightening (0 degrees extension) is just as critical as knee bending for walking without a limp.</li>
+        <li>Active swelling control via leg elevation and cryotherapy unlocks joint range of motion faster.</li>
+        <li>In-home physiotherapy during weeks 1 to 3 avoids painful clinic commutes and protects early healing.</li>
+    </ul>
+</div>
 
 Total Knee Arthroplasty (TKA), commonly known as a **Total Knee Replacement**, is one of the most successful orthopedic surgeries performed worldwide. It provides dramatic long-term relief from end-stage osteoarthritis.
 
@@ -37,6 +48,11 @@ For patients and families in Faridabad preparing for or recovering from surgery,
   - Normalizing your gait pattern—avoiding compensatory swinging of the hip or leaning.
 
 ---
+
+<div class="doctor-tip-box">
+    <div class="doctor-tip-badge">👨‍⚕️ Clinical Tip from Dr. Abhishek Kumar (PT)</div>
+    <p>"Do NOT place a pillow directly under your operated knee in bed! While it feels comfortable, it encourages a flexion contracture (permanent bend). Keep your leg flat to preserve 0-degree full extension."</p>
+</div>
 
 ## 3 Critical Rules for Post-Operative Knee Rehab
 

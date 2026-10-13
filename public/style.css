@@ -699,3 +699,94 @@ img {
     display: none;
   }
 }
+
+/* Rich Blog Visual Elements */
+.key-takeaways-box {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-left: 5px solid #16A34A;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.key-takeaways-box h4 {
+  color: #15803D !important;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.key-takeaways-box ul {
+  margin: 0 !important;
+  padding-left: 1.25rem !important;
+  color: #166534 !important;
+}
+
+.key-takeaways-box li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem !important;
+  line-height: 1.6;
+}
+
+.doctor-tip-box {
+  background: linear-gradient(135deg, #EFF6FF 0%, #F0FDFA 100%);
+  border: 1px solid #BFDBFE;
+  border-left: 5px solid var(--secondary-teal);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.doctor-tip-badge {
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doctor-tip-box p {
+  color: #1E3A8A !important;
+  margin: 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.6;
+}
+
+.exercise-card {
+  background: var(--white);
+  border: 1px solid #E2E8F0;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+}
+
+.exercise-tag {
+  display: inline-block;
+  background: #E0F2FE;
+  color: #0369A1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.5px;
+}
+
+.exercise-card h4 {
+  color: var(--primary-blue);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}

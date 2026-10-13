@@ -4,8 +4,19 @@ title: "Why Do Your Knees Hurt When Climbing Stairs? (And What to Do)"
 description: "Experiencing sharp or aching knee pain on stairs? Understand common causes like patellofemoral pain and runner's knee, plus practical recovery tips."
 date: "Oct 06, 2026"
 category: "Joint Health"
+readTime: "4 min read"
+image: "/images/blog/knee-pain-climbing-stairs.jpg"
 icon: "🦵"
 ---
+
+<div class="key-takeaways-box">
+    <h4>📌 Key Takeaways</h4>
+    <ul>
+        <li>Climbing stairs places 3 to 5 times your body weight on the patellofemoral joint.</li>
+        <li>Weak hip stabilizers (gluteus medius) often cause the knee to buckle inward under load.</li>
+        <li>Remember the golden stair rule: "Up with the good leg, down with the bad."</li>
+    </ul>
+</div>
 
 Climbing or descending a flight of stairs places significant load on the human knee joint—typically between **3 to 5 times your total body weight** per step. 
 
@@ -38,6 +49,11 @@ Inflammation or micro-tears in the patellar tendon—connecting the kneecap to t
 ---
 
 ## What You Can Do Right Now
+
+<div class="doctor-tip-box">
+    <div class="doctor-tip-badge">👨‍⚕️ Clinical Stair Climbing Rule</div>
+    <p>"Always lead with your stronger leg when going UP stairs, and lead with your painful leg when going DOWN stairs. This simple adjustment offloads up to 60% of peak shearing force on your affected knee."</p>
+</div>
 
 ### 1. Step Up With the Good Leg First
 Remember the classic physiotherapy rule for stairs:

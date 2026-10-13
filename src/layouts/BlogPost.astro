@@ -11,40 +11,87 @@ const { frontmatter } = Astro.props;
         .article-header {
             background-color: var(--primary-blue);
             color: var(--white);
-            padding: 4rem 0;
+            padding: 3.5rem 0 5rem 0;
             text-align: center;
+        }
+        .article-breadcrumbs {
+            font-size: 0.85rem;
+            color: #94A3B8;
+            margin-bottom: 1.25rem;
+        }
+        .article-breadcrumbs a {
+            color: #CBD5E1;
+            transition: color 0.2s ease;
+        }
+        .article-breadcrumbs a:hover {
+            color: var(--white);
+            text-decoration: underline;
         }
         .article-header h1 {
             color: var(--white);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
+            font-size: 2.25rem;
+            line-height: 1.3;
+            margin-bottom: 1.25rem;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
         }
         .article-meta {
             color: #CBD5E1;
             font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .article-category-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.2rem 0.75rem;
+            border-radius: 9999px;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
         .article-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: var(--white);
-            padding: 3rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: -3rem;
+            padding: 3.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-top: -3.5rem;
             position: relative;
+        }
+        .article-featured-banner {
+            width: 100%;
+            height: auto;
+            max-height: 440px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
         }
         /* Markdown generated styles */
         .article-content :global(h2) {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
             color: var(--primary-blue);
+            font-size: 1.6rem;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 0.5rem;
+        }
+        .article-content :global(h3) {
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: #1E293B;
+            font-size: 1.25rem;
         }
         .article-content :global(p) {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            line-height: 1.8;
             color: var(--text-light);
         }
         .article-content :global(ul) {
@@ -53,22 +100,26 @@ const { frontmatter } = Astro.props;
             list-style: disc;
             color: var(--text-light);
             font-size: 1.1rem;
+            line-height: 1.7;
         }
         .article-content :global(li) {
             margin-bottom: 0.5rem;
+        }
+        .article-content :global(strong) {
+            color: var(--text-dark);
         }
         .author-box {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            margin-top: 3rem;
+            margin-top: 3.5rem;
             padding-top: 2rem;
             border-top: 1px solid #E2E8F0;
         }
         .author-img {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary-teal);
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -76,32 +127,63 @@ const { frontmatter } = Astro.props;
             color: var(--white);
             font-weight: bold;
             font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .article-content {
+                padding: 1.75rem;
+                margin-top: -2rem;
+            }
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
         }
     </style>
 
     <section class="article-header">
         <div class="container">
+            <div class="article-breadcrumbs">
+                <a href="/">Home</a> &rsaquo; <a href="/blog">Blog & Patient Stories</a> &rsaquo; <span>{frontmatter.category || 'Article'}</span>
+            </div>
             <h1>{frontmatter.title}</h1>
-            <p class="article-meta">Published on {frontmatter.date} | Category: {frontmatter.category}</p>
+            <div class="article-meta">
+                <span class="article-category-badge">{frontmatter.category || 'Guide'}</span>
+                <span>📅 {frontmatter.date}</span>
+                {frontmatter.readTime && <span>⏱️ {frontmatter.readTime}</span>}
+                <span>👨‍⚕️ By Dr. Abhishek Kumar (PT)</span>
+            </div>
         </div>
     </section>
 
     <section class="section-padding" style="background: var(--bg-light)">
         <div class="container">
             <div class="article-content">
+                {frontmatter.image && (
+                    <img 
+                        src={frontmatter.image} 
+                        alt={frontmatter.title} 
+                        class="article-featured-banner" 
+                        loading="eager"
+                    />
+                )}
                 
                 <slot />
 
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="/#contact" class="btn btn-primary">Book an Assessment Today</a>
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 0.5rem; border: 1px solid #E2E8F0;">
+                    <h3 style="margin-bottom: 0.5rem; color: var(--primary-blue);">Suffering from similar symptoms?</h3>
+                    <p style="margin-bottom: 1.25rem; color: var(--text-light);">Get an accurate diagnosis and a customized recovery plan from Dr. Abhishek Kumar.</p>
+                    <a href="/#contact" class="btn btn-primary" style="margin-right: 0.5rem;">Book Clinic Assessment</a>
+                    <a href="https://wa.me/919650940281" target="_blank" rel="noopener noreferrer" class="btn btn-accent">Chat on WhatsApp</a>
                 </div>
 
                 <div class="author-box">
                     <div class="author-img">AK</div>
                     <div>
-                        <h4 style="margin-bottom: 0.25rem;">Written/reviewed by: Dr. Abhishek Kumar (PT)</h4>
-                        <p style="margin: 0; font-size: 0.9rem; margin-bottom: 0.25rem;">BPT, MPT (Orthopedics)</p>
-                        <p style="margin: 0; font-size: 0.8rem; color: var(--text-light);">Last reviewed: {frontmatter.date}</p>
+                        <h4 style="margin-bottom: 0.25rem; color: var(--primary-blue);">Written & Reviewed by: Dr. Abhishek Kumar (PT)</h4>
+                        <p style="margin: 0; font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-dark); font-weight: 500;">BPT, MPT (Orthopedics) | HSCP Reg. HSCP/PT/2022/1583</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">Clinic Director at Nerivahealth Physiotherapy & Rehabilitation Centre, Faridabad.</p>
                     </div>
                 </div>
             </div>
